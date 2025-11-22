@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    tools:context=".RegistrationActivity">
+
+    <!-- Header -->
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:background="@android:color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/owner_details"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_centerVertical="true"/>
+
+<!--        <ImageView-->
+<!--            android:layout_width="24dp"-->
+<!--            android:layout_height="24dp"-->
+<!--            android:src="@drawable/ic_help_outline"-->
+<!--            android:layout_alignParentEnd="true"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:contentDescription="Help" />-->
+        <!-- Note: ic_help_outline would be a vector asset in the drawable folder -->
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/verification_stepper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_marginBottom="24dp"
+        android:layout_below="@id/header"
+        android:padding="20dp"
+        android:background="@color/white"
+        >
+        <!-- Step 1: Owner -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:id="@+id/ownerSelectorTV"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="@drawable/stepper_circle_active"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="@android:color/black"/>
+            <TextView
+                android:id="@+id/ownerTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/owner"
+                android:textColor="@color/color_primary"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:background="#E0E0E0"/>
+
+        <!-- Step 2: Vehicle -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/vehicleSelectorTV"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="@drawable/stepper_circle_inactive"
+                android:gravity="center"
+                android:text="2"
+                android:textColor="@color/black"/>
+            <TextView
+                android:id="@+id/vehicleTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/vehicle"
+                android:textColor="#BDBDBD"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:background="#E0E0E0"/>
+
+        <!-- Step 3: Driver -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+            <TextView
+
+                android:id="@+id/driverSelectorTV"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="@drawable/stepper_circle_inactive"
+                android:gravity="center"
+                android:text="3"
+                android:textColor="@color/black"/>
+            <TextView
+                android:id="@+id/driverTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/driver"
+                android:textColor="#BDBDBD"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fragment_container_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/submit_button_container"
+        android:layout_below="@id/verification_stepper"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        >
+
+    </FrameLayout>
+
+
+    <!-- Submit Button Container -->
+    <LinearLayout
+        android:id="@+id/submit_button_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="16dp"
+        android:background="@android:color/white">
+
+        <Button
+            android:id="@+id/buttonSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Next"
+            android:backgroundTint="#E0E0E0"
+            android:textColor="#A0A0A0"
+            android:textSize="18sp"
+            app:cornerRadius="8dp"/>
+    </LinearLayout>
+
+</RelativeLayout>

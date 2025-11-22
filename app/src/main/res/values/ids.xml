@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="phoneNumberTextView" type="id" />
+    <item name="changeNumberTextView" type="id" />
+    <item name="progressBar" type="id" />
+    <item name="otpEditText" type="id" />
+    <item name="verifyButton" type="id" />
+    <item name="resendOtpTextView" type="id" />
+</resources>

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:background="#FFFFFF"
+        tools:context=".LoginActivity">
+
+        <!-- Porter Partner Logo -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="48dp"
+            android:layout_marginBottom="48dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PortinMe"
+                android:textColor="@color/color_primary"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Partner"
+                android:textColor="#546E7A"
+                android:textSize="28sp"
+                />
+
+        </LinearLayout>
+
+        <!-- Country Selector -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+             android:gravity="center_vertical"
+            android:paddingStart="12dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="12dp"
+            android:paddingBottom="8dp"
+            android:layout_marginBottom="40dp">
+
+            <!-- Placeholder for India Flag -->
+            <TextView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="#FF9800"
+                android:gravity="center"
+                android:text="🇮🇳"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/india"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/change"
+                android:textColor="@color/color_primary"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!-- This is a placeholder for the background drawable.
+             In a real Android project, country_selector_bg.xml would be in the res/drawable folder.
+        <shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+            <solid android:color="#F1F1F1"/>
+            <corners android:radius="20dp"/>
+        </shape>
+        -->
+
+
+        <!-- Mobile Number Label -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mobile_number"
+            android:textColor="#757575"
+            android:textSize="14sp" />
+
+        <!-- Mobile Number Input -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+91"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:paddingEnd="8dp"/>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="24dp"
+                android:background="#BDBDBD"/>
+
+            <EditText
+                android:id="@+id/editTextPhone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:inputType="phone"
+                android:background="@android:color/transparent"
+                android:hint="Enter mobile number"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <!-- Underline for the input -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#BDBDBD"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Checkboxes -->
+        <CheckBox
+            android:id="@+id/checkboxTerms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/i_have_read_and_agreed_to_terms_and_conditions_and_privacy_policy"
+            android:textColor="#333333"
+            android:layout_marginBottom="16dp" />
+
+        <CheckBox
+            android:id="@+id/checkboxTds"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/i_have_read_and_hereby_provide_my_consent_on_the_tds_declaration"
+            android:textColor="#333333" />
+
+        <!-- Spacer to push the login button to the bottom -->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <!-- Login Button -->
+        <Button
+            android:id="@+id/buttonLogin"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="LOGIN"
+            android:backgroundTint="@color/color_primary"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+    <FrameLayout
+        android:id="@+id/LanguageSelectorListView"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:visibility="gone"
+        android:background="@drawable/bottom_popup_bg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+        <include
+            android:id="@+id/IncludedLayout_language"
+            layout="@layout/language_selector_layout"
+
+            />
+
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

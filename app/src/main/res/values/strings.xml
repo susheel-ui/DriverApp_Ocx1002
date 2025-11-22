@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name" translatable="false">OCX_1001_DriverApp</string>
+    <string name="select_language">Select Language</string>
+    <string name="i_have_read_and_agreed_to_terms_and_conditions_and_privacy_policy">I have read and agreed to Terms and Conditions and Privacy Policy</string>
+    <string name="i_have_read_and_hereby_provide_my_consent_on_the_tds_declaration">I have read and hereby provide my consent on the TDS Declaration</string>
+    <string name="mobile_number">Mobile number</string>
+    <string name="india">India</string>
+    <string name="change">Change</string>
+
+    <string-array name="Language_Option">
+        <item>English</item>
+        <item>हिंदी</item>
+        <item>தமிழ்</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="driver_phone_number">Driver Phone Number</string>
+    <string name="driver_name">Driver Name</string>
+    <string name="driver_name_compolsory">Driver Name *</string>
+    <string name="driver_phone_number_compulsory">driver_phone_number*</string>
+    <string name="upload_driver_license">Upload Driver License *</string>
+    <string name="uploaded">Uploaded</string>
+    <string name="driver_registration">Driver Registration</string>
+    <string name="owner">Owner</string>
+    <string name="upload">Upload</string>
+    <string name="name">Name</string>
+    <string name="name_compulsory">Name *</string>
+    <string name="upload_the_following_compulsory">Upload the following *</string>
+    <string name="owner_aadhaar_card">Owner Aadhaar Card</string>
+    <string name="owner_pan_card">Owner PAN Card</string>
+    <string name="owner_selfie">Owner Selfie</string>
+    <string name="owner_details">Owner Details</string>
+    <string name="vehicle">Vehicle</string>
+    <string name="driver">Driver</string>
+    <string name="submit">Submit</string>
+    <string name="next">Next</string>
+
+
+</resources>
